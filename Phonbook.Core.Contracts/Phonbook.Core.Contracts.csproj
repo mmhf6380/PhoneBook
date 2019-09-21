@@ -8,9 +8,4 @@
     <ProjectReference Include="..\PhoneBook.Core.Entites\PhoneBook.Core.Entites.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="People\" />
-    <Folder Include="Phone\" />
-  </ItemGroup>
-
 </Project>
