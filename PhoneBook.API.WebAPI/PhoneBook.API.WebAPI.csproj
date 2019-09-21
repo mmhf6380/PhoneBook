@@ -8,6 +8,14 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Phonbook.Core.Contracts\Phonbook.Core.Contracts.csproj" />
+    <ProjectReference Include="..\PhoneBook.Core.Entites\PhoneBook.Core.Entites.csproj" />
+    <ProjectReference Include="..\Phonebook.DAL.EF\Phonebook.DAL.EF.csproj" />
+    <ProjectReference Include="..\Phonebook.Services.ApplicationServices\Phonebook.Services.ApplicationServices.csproj" />
   </ItemGroup>
 
 </Project>
