@@ -13,7 +13,7 @@ namespace Phonebook.DAL.EF.People
         {
             builder.Property(c => c.FirstName).HasMaxLength(50).IsRequired();
             builder.Property(c => c.LastName).HasMaxLength(50).IsRequired();
-            builder.Property(c => c.Email).HasMaxLength(200).IsRequired().IsUnicode();
+            builder.Property(c => c.Email).HasMaxLength(200).IsRequired().IsUnicode(false);
             builder.Property(c => c.Address).HasMaxLength(500);
         }
     }
