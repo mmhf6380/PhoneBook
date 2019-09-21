@@ -44,5 +44,10 @@ namespace Phonebook.DAL.EF.People
         {
             return context.People.Where(c => c.PersonId == Id).Include(c => c.phones).FirstOrDefault();
         }
+
+        public void Savechange()
+        {
+            context.SaveChanges();
+        }
     }
 }

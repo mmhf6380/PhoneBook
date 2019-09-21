@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Phonebook.Services.ApplicationServices
 {
-    public class PersonSevice : IPersonSevice
+    public class PersonSevice : IPersonService
     {
         private readonly IPersonRepository personRepo;
         private readonly IPhoneRepository phoneRepo;
@@ -25,10 +25,12 @@ namespace Phonebook.Services.ApplicationServices
             personRepo.Add(person);
         }
 
-        public void AppPhoneForPerson(int personId, Phone phone)
+        public void AddPhoneForPerson(int personId, Phone phone)
         {
-            phone.phoneId = personId;
-            phoneRepo.Add(phone);
+            var person = personRepo.Get(personId);
+            person.phones.Add(phone);
+            personRepo.Savechange();
+            
         }
 
         public void DeletePerson(int personId)
