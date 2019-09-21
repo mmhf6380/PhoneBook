@@ -10,5 +10,6 @@ namespace Phonbook.Core.Contracts.Phones
         Phone Get(int Id);
         void Delete(int Id);
         Phone Add(Phone phone);
+        List<Phone> GetPersonPhoneList(int Id);
     }
 }

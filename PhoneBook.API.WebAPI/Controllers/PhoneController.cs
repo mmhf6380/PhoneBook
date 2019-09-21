@@ -25,8 +25,8 @@ namespace PhoneBook.API.WebAPI.Controllers
         [HttpGet("{personId}/Phone")]
         public ActionResult<Person> Get([FromRoute]int personId)
         {
-            var resulte = personSevice.GetPersonWithPhoneList(personId);
-            if (resulte == null || resulte?.PersonId < 1)
+            var resulte = personSevice.GetPersonPhoneList(personId);
+            if (resulte == null || personId < 1)
             {
                 return NotFound();
             }
@@ -53,9 +53,9 @@ namespace PhoneBook.API.WebAPI.Controllers
                 }
                 else
                 {
-                    var person = personSevice.GetPersonWithPhoneList(personId);
                     personSevice.AddPhoneForPerson(personId,phone);
-                    return CreatedAtAction(nameof(Get), new { personId = person.PersonId }, person);
+                    string Uri = string.Format($"api/{0}/Phone",personId);                    
+                    return Created(Uri,phone);
                 }
             }
         }

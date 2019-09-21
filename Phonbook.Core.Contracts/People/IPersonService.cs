@@ -10,12 +10,12 @@ namespace Phonebook.Services.ApplicationServices
     {
         List<Person> GetAllPerson();
         Person GetPerson(int personId);
-        Person GetPersonWithPhoneList(int personId);
         void AddPerson(Person person);
         void AddPhoneForPerson(int personId, Phone phone);
         void UpdatePerson(int personId);
         void UpdatePhoneForPerson(int phoneId);
         void DeletePerson(int personId);
         void DeletePhoneForPerson(int PhoneId);
+        List<Phone> GetPersonPhoneList(int personId);
     }
 }

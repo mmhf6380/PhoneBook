@@ -1,8 +1,10 @@
-﻿using Phonbook.Core.Contracts.Phones;
+﻿using Microsoft.EntityFrameworkCore;
+using Phonbook.Core.Contracts.Phones;
 using Phonebook.DAL.EF.Common;
 using PhoneBook.Core.Entites.Phones;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Phonebook.DAL.EF.Phones
@@ -31,6 +33,12 @@ namespace Phonebook.DAL.EF.Phones
         public Phone Get(int Id)
         {
             return context.Phones.Find(Id);
+        }
+
+        public List<Phone> GetPersonPhoneList(int Id)
+        {
+            var person = context.People.Where(c => c.PersonId == Id).Include(c => c.phones).FirstOrDefault();
+            return person.phones;
         }
     }
 }

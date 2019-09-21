@@ -2,6 +2,7 @@
 using Phonbook.Core.Contracts.People;
 using Phonebook.DAL.EF.Common;
 using PhoneBook.Core.Entites.People;
+using PhoneBook.Core.Entites.Phones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,11 +39,6 @@ namespace Phonebook.DAL.EF.People
         public List<Person> GetAll()
         {
             return context.People.ToList();
-        }
-
-        public Person GetPersonWithPhoneList(int Id)
-        {
-            return context.People.Where(c => c.PersonId == Id).Include(c => c.phones).FirstOrDefault();
         }
 
         public void Savechange()

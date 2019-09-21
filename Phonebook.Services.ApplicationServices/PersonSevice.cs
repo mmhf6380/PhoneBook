@@ -35,9 +35,9 @@ namespace Phonebook.Services.ApplicationServices
 
         public void DeletePerson(int personId)
         {
-            var person = personRepo.GetPersonWithPhoneList(personId);
+            var phoneList = phoneRepo.GetPersonPhoneList(personId);
 
-            if (!person.phones.Any())
+            if (!phoneList.Any())
             {
                 personRepo.Delete(personId);
             }
@@ -59,9 +59,9 @@ namespace Phonebook.Services.ApplicationServices
             return personRepo.Get(personId);
         }
 
-        public Person GetPersonWithPhoneList(int personId)
+        public List<Phone> GetPersonPhoneList(int personId)
         {
-            return personRepo.GetPersonWithPhoneList(personId);
+            return phoneRepo.GetPersonPhoneList(personId);
         }
 
         public void UpdatePerson(int personId)

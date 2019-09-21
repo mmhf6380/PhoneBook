@@ -16,6 +16,7 @@ using Phonebook.DAL.EF.Common;
 using Phonebook.DAL.EF.People;
 using Phonebook.DAL.EF.Phones;
 using Phonebook.Services.ApplicationServices;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace PhoneBook.API.WebAPI
 {
@@ -36,11 +37,20 @@ namespace PhoneBook.API.WebAPI
             services.AddTransient<IPersonService, PersonSevice>();
             services.AddTransient<IPersonRepository, EfPersonRepository>();
             services.AddTransient<IPhoneRepository, EfPhoneRepository>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("PhoneBookAPI.v1", new Info { Title = "PhoneBook API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/PhoneBookAPI.v1/swagger.json", "PhoneBook API V1");
+            });
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -12,7 +12,7 @@ namespace PhoneBook.Core.Entites.People
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        public List<Phone> phones { get; set; }
+        public List<Phone> phones { get; set; } = new List<Phone>();
 
     }
 }

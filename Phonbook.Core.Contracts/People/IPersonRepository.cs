@@ -11,7 +11,6 @@ namespace Phonbook.Core.Contracts.People
         List<Person> GetAll();
         Person Add(Person person);
         void Delete(int Id);
-        Person GetPersonWithPhoneList(int Id);
         void Savechange();
     }
 }
