@@ -1,0 +1,704 @@
+{
+	"info": {
+		"_postman_id": "f4d97469-8e7a-406e-8ef4-866dbf320c80",
+		"name": "Phonebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "https://localhost:44399/api/person",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\tFirstName:\"Mahdi\",\n\tLastName:\"Hoseini\",\n\tEmail:\"mm@gmail.com\",\n\tAddress:\"Tehran,Iran\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44399/api/person",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/person",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\tFirstName:\"Mahdi\",\n\tLastName:\"Hoseini\",\n\tEmail:\"mm@gmail.com\",\n\tAddress:\"Tehran,Iran\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44399/api/person",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"person"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44399/api/Person/2"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 21:38:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"personId\": 2,\n    \"firstName\": \"Mahdi\",\n    \"lastName\": \"Hoseini\",\n    \"email\": \"mm@gmail.com\",\n    \"address\": \"Tehran,Iran\",\n    \"phones\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "https://localhost:44399/api/person",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44399/api/person",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/person",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44399/api/person",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"person"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 21:39:41 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"personId\": 1,\n        \"firstName\": \"Mahdi\",\n        \"lastName\": \"Hoseini\",\n        \"email\": \"mm@gmail.com\",\n        \"address\": \"Tehran,Iran\",\n        \"phones\": null\n    },\n    {\n        \"personId\": 2,\n        \"firstName\": \"Mahdi\",\n        \"lastName\": \"Hoseini\",\n        \"email\": \"mm@gmail.com\",\n        \"address\": \"Tehran,Iran\",\n        \"phones\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "https://localhost:44399/api/person/2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44399/api/person/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"person",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/person/2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44399/api/person/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"person",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 22:20:48 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"personId\": 2,\n    \"firstName\": \"Mahdi\",\n    \"lastName\": \"Hoseini\",\n    \"email\": \"mm@gmail.com\",\n    \"address\": \"Tehran,Iran\",\n    \"phones\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "https://localhost:44399/api/person/3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44399/api/person/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"person",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/person/3",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44399/api/person/3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"person",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 23:39:53 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Phone",
+			"item": [
+				{
+					"name": "https://localhost:44399/api/1/Phone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\tphoneNumber:\"09122101010\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44399/api/1/Phone",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"1",
+								"Phone"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/1/Phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\tphoneNumber:\"0930102030\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44399/api/1/Phone",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"1",
+										"Phone"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44399/api/1/Phone"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 22:17:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"personId\": 1,\n    \"firstName\": \"Mahdi\",\n    \"lastName\": \"Hoseini\",\n    \"email\": \"mm@gmail.com\",\n    \"address\": \"Tehran,Iran\",\n    \"phones\": [\n        {\n            \"phoneId\": 1,\n            \"phoneNumber\": \"09122101010\"\n        },\n        {\n            \"phoneId\": 2,\n            \"phoneNumber\": \"0930102030\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "https://localhost:44399/api/1/Phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\tphoneNumber:\"09123051010\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44399/api/2/Phone",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"2",
+										"Phone"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Location",
+									"value": "api/0/Phone"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 23:24:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"phoneId\": 3,\n    \"phoneNumber\": \"09123051010\"\n}"
+						},
+						{
+							"name": "https://localhost:44399/api/1/Phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\tphoneNumber:\"09122101010\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44399/api/1/Phone",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"1",
+										"Phone"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44399/api/1/Phone"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 22:15:21 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"personId\": 1,\n    \"firstName\": \"Mahdi\",\n    \"lastName\": \"Hoseini\",\n    \"email\": \"mm@gmail.com\",\n    \"address\": \"Tehran,Iran\",\n    \"phones\": [\n        {\n            \"phoneId\": 1,\n            \"phoneNumber\": \"09122101010\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "https://localhost:44399/api/1/Phone",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44399/api/1/Phone",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"1",
+								"Phone"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/1/Phone",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:44399/api/1/Phone",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"1",
+										"Phone"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 23:12:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"phoneId\": 1,\n        \"phoneNumber\": \"09122101010\"\n    },\n    {\n        \"phoneId\": 2,\n        \"phoneNumber\": \"0930102030\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "https://localhost:44399/api/Phone/6",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44399/api/Phone/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44399",
+							"path": [
+								"api",
+								"Phone",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://localhost:44399/api/Phone/6",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44399/api/Phone/6",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44399",
+									"path": [
+										"api",
+										"Phone",
+										"6"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Sep 2019 23:37:38 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	]
+}
