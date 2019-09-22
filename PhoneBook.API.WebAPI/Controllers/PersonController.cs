@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Phonebook.Services.ApplicationServices;
+using PhoneBook.API.WebAPI.Models;
 using PhoneBook.Core.Entites.People;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -21,9 +22,23 @@ namespace PhoneBook.API.WebAPI.Controllers
         }
         // GET: api/Person
         [HttpGet]
-        public List<Person> Get()
+        public List<PersonViewModel> Get()
         {
-            return personSevice.GetAllPerson();
+            var people = personSevice.GetAllPerson();
+            List<PersonViewModel> personList = new List<PersonViewModel>();
+            foreach (var item in people)
+            {
+                personList.Add(new PersonViewModel 
+                { 
+                    PersonId = item.PersonId, 
+                    FirstName = item.FirstName, 
+                    LastName = item.LastName, 
+                    Email = item.Email 
+                });
+                
+            };
+
+            return personList;
         }
 
         // POST api/Person
