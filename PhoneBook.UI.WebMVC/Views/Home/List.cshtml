@@ -1,20 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-@section APIScripts
-{
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ASP.NET Web API</title>
+    <script src="~/lib/Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         function find() {
             var id = $('#prodId').val();
-            $.getJSON("https://localhost:44399/api/products/" + id,
+            $.getJSON("https://localhost:44399/api/Person/" + id,
                 function (data) {
-                    var str = data.Name + ': $' + data.Price;
-                    $('#product').html(str);
+                    var str = val.personId + '/' + val.firstName + '/' + val.lastName + '/' + val.email;
+                    $('#Person').html(str);
                 })
                 .fail(
                     function (jqXHR, textStatus, err) {
-                        $('#product').html('Error: ' + err);
+                        $('#Person').html('Error: ' + err);
                     });
         }
     </script>
@@ -36,12 +35,20 @@
                 });
         });
     </script>
-}
-<div class="text-center">
-    <h1 class="display-4">ASP.Net WebAPI Client Test</h1>
-
-</div>
-<div>
-    <h1>All Person</h1>
-    <ul id='People'/>
-</div>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">ASP.Net WebAPI Client Test</h1>
+    </div>
+    <div>
+        <h1>All Person</h1>
+        <ul id='People' />
+    </div>
+    <div>
+        <label for="prodId">ID:</label>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="Person" />
+    </div>
+</body>
+</html>
